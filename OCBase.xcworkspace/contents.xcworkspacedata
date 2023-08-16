@@ -2,6 +2,21 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:KVOCrash/KVOCrash.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RunLoop/RunLoop.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OCBase/OCBase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RunTime/RunTime.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:UIBase/UIBase.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MultiThread/MultiThread.xcodeproj">
    </FileRef>
 </Workspace>

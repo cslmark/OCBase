@@ -8,10 +8,18 @@
 #import "SLStudent.h"
 
 @implementation SLStudent
++ (void)initialize {
+    NSLog(@"%@ %s", [self class], __func__);
+}
+
 - (void)run {
     [super run];
     NSLog(@"super = %p, self = %p", [super class], [self class]);
     NSLog(@"student run");
+}
+
+- (void)dealloc {
+    NSLog(@"Student Dealloc");
 }
 
 - (BOOL)isEqual:(id)object {

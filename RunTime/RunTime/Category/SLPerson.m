@@ -8,6 +8,10 @@
 #import "SLPerson.h"
 
 @implementation SLPerson
++ (void)initialize {
+    NSLog(@"%@ %s", [self class], __func__);
+}
+
 - (void)run {
     NSLog(@"SLPerson-- Run");
 }

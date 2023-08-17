@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "SLKVCObject.h"
+#import "SLStudent.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) SLKVCObject *object;
@@ -38,13 +39,8 @@ static void *NameContext = &NameContext;
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    int random = arc4random() % 200 + 1;
-    NSString *randomStr = [NSString stringWithFormat:@"%d", random];
-    dispatch_async(self.queue, ^{
-        NSLog(@"Triggle NSThread = %@", [NSThread currentThread]);
-        [self.object setValue:randomStr forKey:@"name"];
-        [self.object sayName];
-    });
+    SLStudent *student = [[SLStudent alloc] init];
+    [student run];
 }
 
 

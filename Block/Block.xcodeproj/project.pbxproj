@@ -29,6 +29,7 @@
 		6DC9293C2A8E1F4500E10CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DC9293E2A8E1F4500E10CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DC9293F2A8E1F4500E10CBB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DFA86002A8F0D6700D87066 /* ViewController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		6DC9292C2A8E1F4300E10CBB /* Block */ = {
 			isa = PBXGroup;
 			children = (
+				6DFA86002A8F0D6700D87066 /* ViewController.cpp */,
 				6DC9292D2A8E1F4300E10CBB /* AppDelegate.h */,
 				6DC9292E2A8E1F4300E10CBB /* AppDelegate.m */,
 				6DC929302A8E1F4300E10CBB /* SceneDelegate.h */,

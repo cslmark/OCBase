@@ -21,7 +21,9 @@ static void *NameContext = &NameContext;
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor systemPinkColor];
-    [self.person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NameContext];
+    self.person.tempArray = [[NSMutableArray alloc] init];
+    NSString *tempArrayStr = NSStringFromSelector(@selector(tempArray));
+    [self.person addObserver:self forKeyPath:tempArrayStr options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NameContext];
     self.queue = dispatch_queue_create("测试线程", DISPATCH_QUEUE_SERIAL);
 }
 
@@ -39,7 +41,18 @@ static void *NameContext = &NameContext;
     NSString *randomStr = [NSString stringWithFormat:@"%d", random];
     dispatch_async(self.queue, ^{
         NSLog(@"Triggle NSThread = %@", [NSThread currentThread]);
-        self.person.name = randomStr;
+        [self.person.tempArray addObject:randomStr];
+//        self.person.tempArray = nil;
+        
+        //这一步特别重要
+            NSMutableArray *tempArray = [self.person mutableArrayValueForKey:NSStringFromSelector(@selector(tempArray))];
+            if (random % 3 == 0) {//插入一条
+                [tempArray addObject:[NSString stringWithFormat:@"NewData- %tu",random]];
+            } else if (random % 3 == 1) {//修改一条
+                tempArray[0] = [NSString stringWithFormat:@"NewData- %tu",random];
+            } else if (random % 3 == 2) {
+                [tempArray removeAllObjects];
+            }
     });
 }
 

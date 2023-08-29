@@ -2,6 +2,24 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:HitTest/HitTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Instrument/Instrument.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OSSignPost/OSSignPost.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ARC/ARC.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MRC/MRC.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SLCopy/SLCopy.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Block/Block.xcodeproj">
    </FileRef>
    <FileRef

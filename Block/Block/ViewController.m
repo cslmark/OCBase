@@ -20,8 +20,9 @@ typedef void(^SLBlock)(int a);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    __block typeof(self) weakself = self;
     SLBlock block = ^(int a) {
-        NSLog(@"a = %d", a);
+        NSLog(@"weakSelf = %@", weakself);
     };
     block(1);
 }
